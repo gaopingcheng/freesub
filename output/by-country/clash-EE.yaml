@@ -4,46 +4,46 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇩 MD 01 - xiaohe
+- name: 🇪🇪 EE 01 - xiaohe
   type: vless
-  server: 185.153.198.86
+  server: 94.183.170.135
   port: 443
-  uuid: c18b978e-1c4e-415c-8bea-07942b563a64
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: shuma.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: shuma.ccwu.cc
-- name: 🇲🇩 MD 02 - xiaohe
-  type: vless
-  server: 143.246.219.51
-  port: 8081
-  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /vless-test
+    path: /
     headers:
-      Host: 143.246.219.51
+      Host: 94.183.170.135
+- name: 🇪🇪 EE 02 - xiaohe
+  type: vless
+  server: 93.123.39.203
+  port: 8443
+  uuid: d544c858-b1ba-45b2-8868-8197daf2a6ee
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: est.luxes.network
+  network: ws
+  ws-opts:
+    path: /assets
+    headers:
+      Host: 93.123.39.203
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇲🇩 MD 01 - xiaohe
-  - 🇲🇩 MD 02 - xiaohe
+  - 🇪🇪 EE 01 - xiaohe
+  - 🇪🇪 EE 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇩 MD 01 - xiaohe
-  - 🇲🇩 MD 02 - xiaohe
+  - 🇪🇪 EE 01 - xiaohe
+  - 🇪🇪 EE 02 - xiaohe
 rules:
 - MATCH,PROXIES
