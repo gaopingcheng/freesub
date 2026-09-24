@@ -4,31 +4,26 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) 01 - xiaohe
+- name: 🇱🇰 LK 01 - xiaohe
   type: vless
-  server: 146.75.84.3
+  server: free.sahanwickramasinghe.me
   port: 443
-  uuid: 8abb648a-b004-42a4-aa05-49cdc2f94d4e
+  uuid: 3d08ed67-5a47-42d3-a948-ebc7d2eb21f7
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: BechBad.global.ssl.fastly.net
+  servername: aka.ms
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
+  - 🇱🇰 LK 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
+  - 🇱🇰 LK 01 - xiaohe
 rules:
 - MATCH,PROXIES
