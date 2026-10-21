@@ -6,18 +6,18 @@ log-level: info
 proxies:
 - name: 🇮🇷 IR 01 - xiaohe
   type: vless
-  server: GB.1.A.diginoisb.ir
-  port: 2022
-  uuid: 43ea50cc-bcf7-4da3-8392-0fec8c16c4a4
+  server: tun.centeriran.shop
+  port: 443
+  uuid: 041b2265-0d0a-4290-9439-25b6a0e15b6e
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: 91.216.104.183
+  servername: 2sdfsxc.centeriran.shop
   network: ws
   ws-opts:
-    path: /spdpapdp
+    path: /
     headers:
-      Host: 91.216.104.183
+      Host: tun.centeriran.shop
 proxy-groups:
 - name: PROXIES
   type: select
